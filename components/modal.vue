@@ -58,6 +58,7 @@ export default {
     },
     methods: {
         show() {
+            this.$emit('callbackVisible', true)
             this.$el.style.display = 'block';
             this._body = document.querySelector('body');
             const _this = this;
@@ -72,6 +73,7 @@ export default {
             }, 0);
         },
         hide() {
+            this.$emit('callbackVisible', false)
             const _this = this;
       // first animate modal out
             this.animateModal = false;
