@@ -62,6 +62,11 @@
                 default: true
             }
         },
+        watch: {
+          checked: function (val) {
+            this.localChecked = val
+          }
+        },
         methods: {
             change(checked) {
                 this.localChecked = checked;
